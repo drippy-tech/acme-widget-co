@@ -23,7 +23,10 @@ class Basket
   # @return [String] Formatted total price with currency symbol (e.g. "$10.00")
   def total
     discounted_items = @offers.inject(@items.dup) { |acc, offer| offer.apply(acc) }
-    subtotal = @items.sum(&:price)
-    format("$%.2f", "%.2f" % subtotal)
+    subtotal = discounted_items.sum(&:price)
+    delivery_fee = Delivery.fee(subtotal)
+    total_price = (subtotal + delivery_fee)
+    format_total = "%.2f" % total_price.truncate(2)
+    format("$%.2f", format_total)
   end
 end
