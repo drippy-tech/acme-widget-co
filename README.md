@@ -1,4 +1,4 @@
-# Acme Widget Co - Ruby Basket System
+# Acme Widget Co
 
 ## Overview
 This is a Ruby-based shopping basket system designed to handle product cataloging, calculating delivery charges, and applying special offers. The system is flexible and easy to extend, allowing you to add new products, promotional rules, and delivery rules as needed.
@@ -21,7 +21,7 @@ This is a Ruby-based shopping basket system designed to handle product catalogin
 #### Offer System (`offer.rb`)
 - A base `Offer` class for defining promotional rules.
 - Currently, it includes the `RedWidgetHalfPriceOffer` for Red Widgets.
-- It’s easy to extend if you want to add new offers in the future.
+- It's easy to extend if you want to add new offers in the future.
 
 #### Delivery (`delivery.rb`)
 - Handles calculating delivery fees based on the order subtotal.
@@ -30,7 +30,7 @@ This is a Ruby-based shopping basket system designed to handle product catalogin
 ## Usage
 
 ### Basic Usage
-Here’s how you can use the system:
+Here's how you can use the system:
 
 ```ruby
 # Create a product catalogue
@@ -49,3 +49,17 @@ basket.add('G01')  # Add a Green Widget
 
 # Calculate the total price
 total = basket.total  # Returns the formatted price (e.g. "$57.90")
+```
+
+## Running the Code
+
+### Prerequisites
+- Ruby 3.0
+
+
+### Running the Application
+
+ Using script:
+   ```bash
+   ruby test_basket.rb
+   ```
