@@ -29,4 +29,5 @@ def apply(items)
 
     # Return all items with discounts applied
     discounted_reds + others
+  end
 end
