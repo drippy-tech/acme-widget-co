@@ -5,7 +5,7 @@ class RedWidgetHalfPriceOffer < Offer
     # @param items [Array<Product>] List of products to apply the offer to
     # @return [Array<Product>] List with every second Red Widget at half price
     def apply(items)
-      reds = items.select { |item| item.code == 'R01' }
+        reds = items.select { |item| item.code == 'R01' }
       others = items.reject { |item| item.code == 'R01' }
   
       discounted_reds = []
@@ -20,5 +20,4 @@ class RedWidgetHalfPriceOffer < Offer
       end
   
       discounted_reds + others
-    end
   end
