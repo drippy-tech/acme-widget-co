@@ -10,4 +10,12 @@ class Basket
     @items = []
   end
 
+  # Adds a product to the basket by its code
+  # @param code [String] The product code
+  # @raise [RuntimeError] If the product code is not found
+  def add(code)
+    product = @catalogue[code]
+    raise "Unknown product code: #{code}" unless product
+    @items << product
+  end
 end
