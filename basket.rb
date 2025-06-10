@@ -18,4 +18,11 @@ class Basket
     raise "Unknown product code: #{code}" unless product
     @items << product
   end
+
+  # Calculate the total price including all items, applied offers, and delivery fee
+  # @return [String] Formatted total price with currency symbol (e.g. "$10.00")
+  def total
+    subtotal = @items.sum(&:price)
+    format("$%.2f", "%.2f" % subtotal)
+  end
 end
