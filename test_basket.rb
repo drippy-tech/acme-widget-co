@@ -1,3 +1,7 @@
+require_relative 'catalogue'
+require_relative 'offer'
+require_relative 'basket'
+
 # This script creates a basket with a set of products and applies offers to calculate the total price.
 # The basket is tested with different combinations of product codes.
 # The `RedWidgetHalfPriceOffer` is applied to give a discount on every second Red Widget (R01).

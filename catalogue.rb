@@ -1,3 +1,4 @@
+require_relative 'product'
 # This is the product catalogue, where each product is stored with its unique code.
 # It includes a few sample products: Red, Green, and Blue Widgets, each with its price.
 # The catalogue helps look up products when adding them to the basket or applying offers.

@@ -1,3 +1,12 @@
+require_relative 'product'
+
+class Offer
+  def apply(items)
+    items
+  end
+end
+
+class RedWidgetHalfPriceOffer < Offer
 def apply(items)
     # Separate Red Widgets from other products
     reds = items.select { |item| item.code == 'R01' }

@@ -1,3 +1,5 @@
+require_relative 'delivery'
+
 #Basket holds products, applies offers, and calculates totals using a catalog, delivery rules, and promotions.
 class Basket
   # Initialize a new basket with required dependencies
